@@ -1,0 +1,38 @@
+{
+  "name": "api-questions",
+  "version": "0.0.1",
+  "description": "API for questions enad",
+  "main": "index.js",
+  "scripts": {
+    "start": "node index.js",
+    "dev": "npm run standard && nodemon index.js",
+    "standard": "standard ./src"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/CheeseFlan/api-questions.git"
+  },
+  "keywords": [
+    "Node",
+    "API",
+    "Express",
+    "ENAD",
+    "MongoDB"
+  ],
+  "author": "Joao Henrique Gomes <joaoh3326@gmail.com>",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/CheeseFlan/api-questions/issues"
+  },
+  "homepage": "https://github.com/CheeseFlan/api-questions#readme",
+  "devDependencies": {
+    "nodemon": "^1.12.1",
+    "standard": "^10.0.3"
+  },
+  "dependencies": {
+    "bcrypt": "^1.0.3",
+    "body-parser": "^1.18.2",
+    "express": "^4.16.2",
+    "mongoose": "^4.12.3"
+  }
+}
