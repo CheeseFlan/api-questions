@@ -12,17 +12,17 @@ const questionSchema = new Schema({
     require: true
   },
   alternatives: {
-    type: [String]
-    require: true
+    type: [String],
+    require: true,
     validate: [limitArray, 'Number max of questions is 5']
   },
   answer: {
     type: Number,
-    require: true,
+    require: true
   }
 },
-{
-  timestamps: true
-})
+  {
+    timestamps: true
+  })
 
 module.exports = mongoose.model('Questions', questionSchema)

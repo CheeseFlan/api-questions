@@ -23,8 +23,8 @@ const userSchema = new Schema({
     default: 'ALUNO'
   }
 },
-{
-  timestamps: true
-})
+  {
+    timestamps: true
+  })
 
 module.exports = mongoose.model('Users', userSchema)
