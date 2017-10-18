@@ -18,13 +18,13 @@ const userSchema = new Schema({
     set: passwordHash
   },
   role: {
+    type: String,
     enum: ['ADM', 'PROFESSOR', 'ALUNO'],
     default: 'ALUNO'
   }
 },
 {
   timestamps: true
-}
-)
+})
 
 module.exports = mongoose.model('Users', userSchema)

@@ -1,4 +1,4 @@
-const bcrypt = requir('bcrypt')
+const bcrypt = require('bcrypt')
 
 const passwordHash = (password) => {
   const salt = bcrypt.genSaltSync()
