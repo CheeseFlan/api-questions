@@ -1,6 +1,7 @@
 const express = require('express')
 const mongoose = require('mongoose')
 const bodyParser = require('body-parser')
+const morgan = require('morgan')
 const server = express()
 const cors = require('./utils/cors')
 const config = require('./config')
@@ -18,6 +19,8 @@ server.use(bodyParser.urlencoded({ extended: false }))
 server.use(bodyParser.json())
 
 server.use(cors)
+
+server.use(morgan('dev'))
 
 server.post('/api/login', require('./middlewares/auth'))
 

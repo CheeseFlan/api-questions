@@ -26,6 +26,7 @@
   },
   "homepage": "https://github.com/CheeseFlan/api-questions#readme",
   "devDependencies": {
+    "morgan": "^1.9.0",
     "nodemon": "^1.12.1",
     "standard": "^10.0.3"
   },
