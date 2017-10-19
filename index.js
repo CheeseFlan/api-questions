@@ -19,7 +19,10 @@ server.use(bodyParser.json())
 
 server.use(cors)
 
+server.post('/api/login', require('./middlewares/auth'))
+
 server.use('/api', require('./src/routes/user'))
+server.use('/api', require(('./src/routes/questions')))
 server.use((err, req, res, next) => {
   if (err) {
     res.status(500).send({ ERROR: err.message })
