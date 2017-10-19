@@ -1,5 +1,8 @@
 # API de questões para concursos
 
+>## Pré-requisitos
+>>+ Nodejs.version >= 7
+
 >## Iniciando
 >>- `Clone repository`
 >>- `cd api-questions`
