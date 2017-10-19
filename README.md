@@ -24,4 +24,8 @@
 >>>+ A rota a ser utilizada para `get`(para buscar apenas uma),`post`, `put`, `delete`:
 >>>>- `/api/questions/:id`
 
-###Autor - João Henrique Gomes e João Bruno Alencar - licensed by [MIT](./LICENSE.md)
+#Autores
+>+ João Henrique Gomes e João Bruno Alencar
+
+#Licensa
+>+ licensed by [MIT](./LICENSE.md)
