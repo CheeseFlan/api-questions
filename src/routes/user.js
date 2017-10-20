@@ -10,7 +10,7 @@ const middlewares = [authenticate, authRole]
 
 router.get('/user', middlewares, asyncMiddleware(userController.findAll))
 router.get('/user/:id', middlewares, asyncMiddleware(userController.find))
-router.post('/user', middlewares, asyncMiddleware(userController.create))
+router.post('/user', asyncMiddleware(userController.create))
 router.put('/user/:id', middlewares, asyncMiddleware(userController.update))
 router.delete('/user/:id', middlewares, asyncMiddleware(userController.remove))
 
