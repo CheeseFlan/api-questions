@@ -20,7 +20,7 @@ server.use(bodyParser.json())
 
 server.use(cors)
 
-server.use(morgan('dev'))
+// server.use(morgan('dev'))
 
 server.post('/api/login', require('./middlewares/auth'))
 
