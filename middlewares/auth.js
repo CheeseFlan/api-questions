@@ -10,9 +10,8 @@ module.exports = async (req, res, next) => {
   try {
     const user = await userModel.findOne({ username: username })
 
-    const payload = user.toJSON()
-
     if (user && bcrypt.compareSync(password, user.password)) {
+      const payload = user.toJSON()
       const token = await jwt.sign(payload, config.secret, { expiresIn: '1 day' })
 
       res.json({ token })

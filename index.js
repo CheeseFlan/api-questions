@@ -26,11 +26,10 @@ server.post('/api/login', require('./middlewares/auth'))
 
 server.use('/api', require('./src/routes/user'))
 server.use('/api', require(('./src/routes/questions')))
+
 server.use((err, req, res, next) => {
-  if (err) {
+    res.status(err.status || 500)
     res.status(500).send({ ERROR: err.message })
-  }
-  next()
 })
 
 server.get('/', (req, res, next) => res.send('Hello there!!!'))

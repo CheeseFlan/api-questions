@@ -14,8 +14,7 @@ const userSchema = new Schema({
   },
   password: {
     type: String,
-    required: true,
-    set: passwordHash
+    required: true
   },
   role: {
     type: String,
@@ -25,6 +24,9 @@ const userSchema = new Schema({
 },
   {
     timestamps: true
-  })
+  }
+)
+
+userSchema.pre('save', passwordHash)
 
 module.exports = mongoose.model('Users', userSchema)
