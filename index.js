@@ -1,7 +1,7 @@
 const express = require('express')
 const mongoose = require('mongoose')
 const bodyParser = require('body-parser')
-const morgan = require('morgan')
+// const morgan = require('morgan')
 const server = express()
 const cors = require('./utils/cors')
 const config = require('./config')
@@ -33,6 +33,6 @@ server.use((err, req, res, next) => {
   next()
 })
 
-server.get('/hello', (req, res, next) => res.send('Hello there!!!'))
+server.get('/', (req, res, next) => res.send('Hello there!!!'))
 
 server.listen(config.port, () => console.log(`Server is running on port: ${config.port}`))
