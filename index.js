@@ -28,8 +28,7 @@ server.use('/api', require('./src/routes/user'))
 server.use('/api', require(('./src/routes/questions')))
 
 server.use((err, req, res, next) => {
-    res.status(err.status || 500)
-    res.status(500).send({ ERROR: err.message })
+  res.status(err.status || 500).send({ ERROR: err.message })
 })
 
 server.get('/', (req, res, next) => res.send('Hello there!!!'))
